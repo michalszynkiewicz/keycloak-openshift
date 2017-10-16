@@ -5,4 +5,6 @@ RUN curl -L -o /tmp/keycloak.jar 'http://repo2.maven.org/maven2/org/wildfly/swar
 
 EXPOSE 8080
 
+RUN chmod -R 777 /
+
 CMD java -jar /tmp/keycloak.jar

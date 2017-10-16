@@ -6,6 +6,8 @@ RUN curl -L -o /tmp/keycloak.jar 'http://repo2.maven.org/maven2/org/wildfly/swar
 EXPOSE 8080
 
 RUN mkdir /workdir && chmod -R 777 /workdir
+ENV KEYCLOAK_USER=admin
+ENV KEYCLOAK_PASSWORD=admin
 
 WORKDIR /workdir
 

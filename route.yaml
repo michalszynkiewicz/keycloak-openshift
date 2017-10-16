@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: keycloak
+  namespace: bjug
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: keycloak-openshift
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+    - conditions:
+      routerName: router
